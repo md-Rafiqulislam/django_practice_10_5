@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>This is home page for this django app in first app</h1>
+        </div>
+        <nav>
+            <h4>go to <a href="/first_app/">home</a></h4>
+            <h4>go to <a href="{% url 'about' %}">about</a></h4>
+            <h4>go to <a href="{% url 'contact' %}">contact</a></h4>
+            <h4>go to <a href="{% url 'projects' %}">projects</a> to see the template filters work</h4>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>This is project page for this django app in first app</h1>
+        </div>
+        <nav>
+            <h4>go to <a href="/first_app/">home</a></h4>
+            <h4>go to <a href="{% url 'about' %}">about</a></h4>
+            <h4>go to <a href="{% url 'contact' %}">contact</a></h4>
+            <h4>go to <a href="{% url 'projects' %}">projects</a></h4>
+        </nav>
+    </header>
+    <div>
+        <p>here are some data_filter: </p>
+        <div>
+            <p>today's date : {{ my_date | date:"D d M Y" }}</p>
+            <p>age : {{ age | add:"2" }}</p>
+            <p>name (with first letter capital) : {{ name | capfirst }}</p>
+            <p>name (in center of given length) : "{{ name | center:" 10 " }}"</p>
+            <p>cut the extra space : {{ name1 | cut:" " }}</p>
+            <p>cut the m : {{ name1 | cut:"m" }}</p>
+            <p>the default value : {{ no_name | default:"there is no name in the list" }}</p>
+            <p>the given name : {{ have_name | default:"there is no name in the list" }}</p>
+            <br>
+            <div>out put the list of dictionaries according the given condition (name) : {{ arr | dictsort:"name" }}</div>
+            <br>
+            <div>out put the list of dictionaries according the given condition (age) : {{ arr | dictsort:"age" }}</div>
+            <br>
+            <div>out put the list of dictionaries according the given condition (number) : {{ arr | dictsort:"numbers" }}</div>
+            <br>
+            <p>the age is {{age}}. is age divided by 3 ? : {{ age | divisibleby:"3" }}</p>
+            <p>the age is {{age}}. is age divided by 5 ? : {{ age | divisibleby:"3" }}</p>
+            <p>the code of this ( < ) is : {{ symbol_1 | escape }}</p>
+            <p>file size of (12345678) : {{ sizeOfFile | filesizeformat }}</p>
+            <br>
+            <p>the first item of this list{{ arr | first }}</p>
+            <br>
+            <p>the last item of this list : {{ arr | last }}</p>
+            <p>the length of name (rahim) : {{ name | length }}</p>
+        </div>
+    </div>
+</body>
+</html>
